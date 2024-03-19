@@ -3,7 +3,7 @@ using namespace std;
 
 string nama;
 int nAdidas, nPuma, nNB, nCompass, nNike;
-int hAdidas = 300, hNB = 250, hPuma = 150, hNike = 350;
+int hAdidas = 300, hNB = 250, hPuma = 150, hNike = 350, hCompass = 150;
 
 void input() {
     cout << "masukan jumlah Adidas = ";
@@ -18,19 +18,28 @@ void input() {
     cin >> nNike;
 }
 
-int totalHarga() {
-    return (nAdidas * hAdidas) + (nPuma + hPuma) + (nNB * hNB) + (nNike * hNike);
+int totalHarga()
+{
+    return (nAdidas * hAdidas) + (nPuma * hPuma) + (nNB * hNB) + (nCompass * hCompass) + (nNike * hNike);
 }
 
-void display() {
+void Display(){
+
+    cout << endl;
+    cout << "==============" << endl;
     cout << "Jumlah Puma = " << nPuma << endl;
     cout << "Jumlah Adidas = " << nAdidas << endl;
-    cout << "Total harga = Rp. " << totalHarga << endl;
+    cout << "Jumlah NB = " << nNB << endl;
+    cout << "Jumlah Compass = " << nCompass << endl;
+    cout << "Jumlah Nike = " << nNike << endl;
+    cout << endl;
+    cout << "Total Harga = Rp." << totalHarga() << endl;
 }
 
 int main() {
+
     input();
-    display();
+    Display();
 
 
 }
